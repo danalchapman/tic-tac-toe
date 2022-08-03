@@ -46,7 +46,6 @@ body {
 
 /* Game Board */
 .game-board-container {
-    /* background-image: linear-gradient(#9D653E, #81566A, #343D5B); */
     background-image: linear-gradient(#343D5B, #81566A, #9D653E);
     color: antiquewhite;
     display: flex;
@@ -93,7 +92,7 @@ body {
     width: 65%;
 }
 
-/* Game Board Buttons */
+/* Buttons */
 button {
     background: none;
     cursor: pointer;
