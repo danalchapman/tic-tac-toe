@@ -1,0 +1,55 @@
+/* Global Styling */
+body {
+    background-color: lightslategray;
+    margin: 0px;
+}
+
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vh;
+}
+
+.player-1-token, 
+.player-2-token {
+    height: 30px;
+    width: 30px;
+}
+
+/* Players' Side Bar */
+.player-container {
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-label {
+    border: 2px solid rebeccapurple;
+}
+
+.player-win-count {
+    border: 2px solid red;
+}
+
+/* Game Board */
+.game-board-container {
+    border: 2px solid blue;
+}
+
+.turn-counter {
+    border: 2px solid limegreen;
+}
+
+.game-board {
+    border: 2px solid green;
+}
+
+.announcements {
+    border: 2px solid forestgreen;
+}
+
+.hidden {
+    display: none;
+}
