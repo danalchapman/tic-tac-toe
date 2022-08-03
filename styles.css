@@ -48,6 +48,7 @@ body {
 .game-board-container {
     /* background-image: linear-gradient(#9D653E, #81566A, #343D5B); */
     background-image: linear-gradient(#343D5B, #81566A, #9D653E);
+    color: antiquewhite;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -93,12 +94,40 @@ body {
 }
 
 /* Game Board Buttons */
-
 button {
     background: none;
     cursor: pointer;
     height: 125px;
     width: 125px;
+}
+
+.right-bot-border {
+    border-width: 0px 3px 3px 0px;
+}
+
+.left-bot-border {
+    border-width: 0px 0px 3px 3px;;
+}
+
+.bottom-border {
+    border-width: 0px 0px 3px 0px;
+}
+
+.right-border {
+    border-width: 0px 3px 0px 0px;
+}
+
+.left-border {
+    border-width: 0px 0px 0px 3px;
+}
+
+.no-border {
+    border: none;
+}
+
+.square {
+    border-style: solid;
+    border-color: rebeccapurple;
 }
 
 .hidden {
