@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./styles.css">
-        <title>Tic-Tac-Toe</title>
-    </head>
-    <body>
-        <section>
-            <!-- Player 1 Side Bar -->
-            <h2>Player One</h2>
-            <img src="./assets/Sun.svg" alt="orange sun with a dark halo">
-            <h3>Wins:</h3>
-        </section>
-        <section>
-            <!-- Game Board -->
-            <h1>It's (Token)'s Turn</h1>
-        </section>
-        <section>
-            <!-- Player 2 Side Bar -->
-            <h2>Player Two</h2>
-            <img src="./assets/Terrestrial-World.svg" alt="full moon with a halo">
-            <h3>Wins:</h3>
-        </section>
-        <script src="./src/player.js"></script>
-        <script src="./src/game.js"></script>
-        <script src="./src/main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <section>
+      <h4>Player One</h4>
+      <img class="player-1-token" src="./assets/Sun.svg" alt="player 1 sun icon">
+      <h3>Wins: </h3>
+    </section>
+    <section class="game-board-container">
+      <header class="turn-counter">
+        <h2> Turn</h2>
+        <img class="player-1-token" src="./assets/Sun.svg" alt="player 1 sun icon">
+        <img class="player-2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon icon">
+      </header>
+      <article class="game-board">
+        <button class="board-box" id="1"></button>
+        <button class="board-box" id="2"></button>
+        <button class="board-box" id="3"></button>
+        <button class="board-box" id="4"></button>
+        <button class="board-box" id="5"></button>
+        <button class="board-box" id="6"></button>
+        <button class="board-box" id="7"></button>
+        <button class="board-box" id="8"></button>
+        <button class="board-box" id="9"></button>
+      </article>
+      <footer class="announcements">
+        <img class="player-1-token" src="./assets/Sun.svg" alt="player 1 sun icon">
+        <img class="player-2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon icon">
+        <h2> Wins!</h2>
+        <h2>It's a Draw!</h2>
+      </footer>
+    </section>
+    <section>
+      <h4>Player Two</h4>
+      <img class="player-2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon icon">
+      <h3>Wins: </h3>
+    </section>
+    <script type="text/javascript" src="./src/player.js"></script>
+    <script type="text/javascript" src="./src/game.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+  </body>
 </html>
