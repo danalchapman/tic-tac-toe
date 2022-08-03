@@ -5,49 +5,87 @@ body {
 }
 
 .page-container {
+    font-family: "Luminari", fantasy;
     display: flex;
-    justify-content: space-between;
+    margin-right: 0;
     height: 100vh;
-    width: 100vh;
 }
 
 .player-1-token, 
 .player-2-token {
+    margin: 15px 0px 7px 0px;
     height: 30px;
     width: 30px;
 }
 
 /* Players' Side Bar */
 .player-container {
-    border: 2px solid pink;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-}
-
-.player-label {
-    border: 2px solid rebeccapurple;
+    height: 100%;
+    width: 400px;
 }
 
 .player-win-count {
-    border: 2px solid red;
+    margin: 0px;
 }
 
 /* Game Board */
 .game-board-container {
-    border: 2px solid blue;
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
 }
 
-.turn-counter {
-    border: 2px solid limegreen;
+.turn-counter,
+.announcements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+}
+
+.turn-counter img,
+.announcements img {
+    margin: 15px 0px;
+}
+
+.player-the,
+.player-s,
+.player-turn,
+.announce-wins,
+.announce-draw {
+    font-size: 25px;
+    margin: 20px 10px;
+}
+
+.player-s {
+    margin: 30px 5px 10px 2px;
 }
 
 .game-board {
     border: 2px solid green;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: 55%;
+    width: 65%;
 }
 
-.announcements {
-    border: 2px solid forestgreen;
+/* Game Board Buttons */
+
+button {
+    background: none;
+    /* border: 0px; */
+    height: 125px;
+    width: 125px;
 }
 
 .hidden {
