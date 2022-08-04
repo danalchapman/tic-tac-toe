@@ -11,8 +11,7 @@ body {
     height: 100vh;
 }
 
-.player-1-token, 
-.player-2-token {
+.player-token {
     margin: 15px 0px 7px 0px;
     height: 30px;
     width: 30px;
@@ -20,6 +19,8 @@ body {
 
 /* Players' Side Bar */
 .player-container {
+    background-position: center;
+    background-size: cover;
     color: antiquewhite;
     display: flex;
     align-items: center;
@@ -29,15 +30,11 @@ body {
 }
 
 .left-side {
-    background-image: url(./assets/david-billings-xczh7jN17fA-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: url("./assets/david-billings-xczh7jN17fA-unsplash.jpg");
 }
 
 .right-side {
-    background-image: url(./assets/vino-li-PkJbY56JKh4-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: url("./assets/vino-li-PkJbY56JKh4-unsplash.jpg");
 }
 
 .player-win-count {
@@ -64,22 +61,15 @@ body {
     width: inherit;
 }
 
-.turn-counter img,
-.announcements img {
-    margin: 15px 0px;
-}
-
-.player-the,
-.player-s,
-.player-turn,
+.player-header,
 .announce-wins,
 .announce-draw {
     font-size: 25px;
     margin: 20px 10px;
 }
 
-.player-s {
-    margin: 30px 5px 10px 2px;
+.player-header .player-token {
+    margin: 0px;
 }
 
 .game-board {
@@ -126,7 +116,7 @@ button {
 
 .square {
     border-style: solid;
-    border-color: rebeccapurple;
+    border-color: antiquewhite;
 }
 
 .hidden {
