@@ -1,15 +1,14 @@
 class Game {
     constructor() {
-        this.board = [0, 1, 2, 3, 4, 5, 6, 7, 8]; // id names of buttons
-        this.players = []; // playerone & playertwo
-        this.turnCount = 0; // turns until win
-        this.gameOver = false; // gameOver === true;
-        this.gameDraw = false; // gameDraw === true;
+        this.board = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+        this.gameDraw = false;
+        this.gameOver = false;
+        this.players = [];
+        this.turnCount = 0;
     }
 
     checkPlayerTurn() {
-        // playerone === true/false?
-        // currentPlayer = playerone/playertwo?
+        // toggle player on turn count
     }
 
     checkHorizontalWin() {
@@ -42,5 +41,6 @@ class Game {
 
     resetGame() {
         // timeout?? research
+        // this.turnCount = 0;
     }
 }
