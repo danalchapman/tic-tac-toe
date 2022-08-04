@@ -8,3 +8,6 @@ var currentGame = new Game(playerOne, playerTwo);
 // Event Listeners 
 
 // Functions
+function triggerBoardReset() {
+    setTimeout(game.resetGame(), 2000);
+}
