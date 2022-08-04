@@ -13,6 +13,7 @@ class Game {
         };
         this.gameOver = false;
         this.players = [];
+        this.firstPlayer = "playerOne";
         this.currentTurn = "playerOne";
         this.turnCount = 0;
     }
@@ -95,7 +96,25 @@ class Game {
     }
     
     resetGame() {
-        // timeout?? research
-        // currentGame.turnCount = 0;
+        currentGame.board = {
+            a1: "",
+            a2: "",
+            a3: "",
+            b1: "",
+            b2: "",
+            b3: "",
+            c1: "",
+            c2: "",
+            c3: ""
+        };
+        currentGame.gameOver = false;
+        currentGame.turnCount = 0;
+        if (currentGame.firstPlayer === "playerOne") {
+            currentGame.firstPlayer = "playerTwo";
+            currentGame.currentPlayer = "playerTwo";
+        } else {
+            currentGame.firstPlayer = "playerOne";
+            currentGame.currentPlayer = "playerOne";
+        }
     }
 }
