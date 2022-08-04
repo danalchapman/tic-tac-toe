@@ -1,9 +1,16 @@
 class Game {
     constructor() {
         this.board = {
-            
-        }
-        this.gameDraw = false;
+            a1: "",
+            a2: "",
+            a3: "",
+            b1: "",
+            b2: "",
+            b3: "",
+            c1: "",
+            c2: "",
+            c3: ""
+        };
         this.gameOver = false;
         this.players = [];
         this.currentTurn = "playerOne";
@@ -23,9 +30,22 @@ class Game {
         }
     }
 
-    setPlayerToken() { // Track board game data
-
+    setPlayerToken(cellId) { // get token from this.players
+        for (var i = 0; i < this.players.length; i++) {
+            if (!this.board[cellId] && this.players[i].name === this.currentTurn) {
+                this.board[cellId] = this.players[i].token;
+                this.checkPlayerTurn();
+            }
+        }
     } 
+    
+    checkWinCondition() {
+        // check hor/vert/diag/draw methods
+    }
+
+    checkDrawCondition() {
+        // check for Draw conditions
+    }
 
     checkHorizontalWin() {
         // horizontal win conditions include
@@ -47,16 +67,8 @@ class Game {
         // [[2], [4], [6]]
     }
 
-    checkWinCondition() {
-        // check hor/vert/diag methods
-    }
-
-    checkDrawCondition() {
-        // check for Draw conditions
-    }
-
     resetGame() {
         // timeout?? research
-        // this.turnCount = 0;
+        // currentGame.turnCount = 0;
     }
 }
