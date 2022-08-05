@@ -8,8 +8,8 @@
   <body>
     <section class="page-container">
         <section class="player-container left-side">
-          <img class="player-token" src="./assets/Sun.svg" alt="player 1 sun">
-          <h3 class="player-win-count">Wins: </h3>
+          <img class="player-token" id="player1-token" src="./assets/Sun.svg" alt="player 1 sun">
+          <h3 class="player1-win-count">Wins: </h3>
         </section>
         <section class="game-board-container">
           <header class="turn-counter">
@@ -27,15 +27,13 @@
             <button class="left-border square" id="c3"></button>
           </article>
           <footer class="announcements">
-            <img class="player-token hidden" src="./assets/Sun.svg" alt="player 1 sun">
-            <img class="player-token hidden" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
-            <h2 class="announce-wins hidden"> Wins!</h2>
+            <h2 class="announce-wins hidden"><img class="player-token hidden" src="./assets/Sun.svg" alt="player 1 sun"> Wins!</h2>
             <h2 class="announce-draw hidden">It's a Draw!</h2>
           </footer>
         </section>
         <section class="player-container right-side">
-          <img class="player-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
-          <h3 class="player-win-count">Wins: </h3>
+          <img class="player-token" id="player2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
+          <h3 class="player2-win-count">Wins: </h3>
         </section>
     </section>
     <script type="text/javascript" src="./src/player.js"></script>
