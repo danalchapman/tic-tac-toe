@@ -64,13 +64,14 @@ function renderBoard() {
     }
     console.log(currentGame.currentTurn);
     console.log(currentGame.gameOver)
+    console.log(currentGame.isDraw)
     showCurrentTurn();
 }
 
 // Game Over Display
-// function displayAnnouncement() {
+function displayAnnouncement() {
 
-// }
+}
 // displayAnnoucement (show the winner or draw/update currentGame.players[i]winsCount = player1-win-count)
 // announceWinner.classList.remove(".hidden")
 // on a draw--

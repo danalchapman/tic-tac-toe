@@ -12,6 +12,7 @@ class Game {
             c3: ""
         };
         this.gameOver = false;
+        this.isDraw = false;
         this.players = [playerOne, playerTwo];
         this.firstPlayer = "playerOne";
         this.currentTurn = "playerOne";
@@ -55,6 +56,7 @@ class Game {
             if (winningToken === this.players[i].token) {
                 this.players[i].winsCount += 1;
                 currentGame.gameOver = true;
+                currentGame.isDraw = false;
             }
         }
     }
@@ -96,6 +98,7 @@ class Game {
     checkDrawCondition() {
         if (this.turnCount > 8) {
             currentGame.gameOver = true;
+            currentGame.isDraw = true;
         }
     }
     
