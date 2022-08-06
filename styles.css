@@ -62,8 +62,7 @@ body {
 }
 
 .player-header,
-.announce-wins,
-.announce-draw {
+.announce-banner {
     font-size: 25px;
     margin: 20px 10px;
 }

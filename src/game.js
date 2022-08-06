@@ -1,5 +1,5 @@
 class Game {
-    constructor() {
+    constructor(playerOne, playerTwo) {
         this.board = {
             a1: "",
             a2: "",
@@ -12,7 +12,7 @@ class Game {
             c3: ""
         };
         this.gameOver = false;
-        this.players = [];
+        this.players = [playerOne, playerTwo];
         this.firstPlayer = "playerOne";
         this.currentTurn = "playerOne";
         this.turnCount = 0;
@@ -21,6 +21,7 @@ class Game {
     checkPlayerTurn() {
         this.turnCount += 1;
         this.checkDrawCondition();
+        this.checkWinCondition();
         this.changeTurn();
     }
 
@@ -34,7 +35,7 @@ class Game {
 
     setPlayerToken(cellId) {
         for (var i = 0; i < this.players.length; i++) {
-            if (!this.board[cellId] && this.players[i] === this.currentTurn) {
+            if (!this.gameOver && !this.board[cellId] && this.players[i].name === this.currentTurn) {
                 this.board[cellId] = this.players[i].token;
                 this.checkPlayerTurn();
             }
@@ -42,16 +43,19 @@ class Game {
     } 
     
     checkWinCondition() {
-        var winningToken = "";
-
-        this.checkHorizontalWin();
-        this.checkVerticalWin();
-        this.checkDiagonalWin();
+        var winningToken = this.checkHorizontalWin();
+        if (!winningToken) {
+            winningToken = this.checkVerticalWin();
+        } 
+        if (!winningToken) {
+            winningToken = this.checkDiagonalWin();
+        }
 
         for (var i = 0; i < this.players.length; i++) {
-            winningToken = this.players[i].token;
-            this.players[i].winsCount += 1;
-            currentGame.gameOver = true;
+            if (winningToken === this.players[i].token) {
+                this.players[i].winsCount += 1;
+                currentGame.gameOver = true;
+            }
         }
     }
 
@@ -69,11 +73,11 @@ class Game {
     
     checkVerticalWin() {
         if (this.board.a1 === this.board.b1 && this.board.b1 === this.board.c1) {
-            winningToken = this.board.a1;
+            return this.board.a1;
         } else if (this.board.a2 === this.board.b2 && this.board.b2 === this.board.c2) {
-            winningToken = this.board.a2;
+            return this.board.a2;
         } else if (this.board.a3 === this.board.b3 && this.board.b3 === this.board.c3) {
-            winningToken = this.board.a3;
+            return this.board.a3;
         } else {
             return "";
         }
@@ -81,9 +85,9 @@ class Game {
     
     checkDiagonalWin() {
         if (this.board.a1 === this.board.b2 && this.board.b2 === this.board.c3) {
-            winningToken = this.board.a1;
+            return this.board.a1;
         } else if (this.board.a3 === this.board.b2 && this.board.b2 === this.board.c1) {
-            winningToken = this.board.a3;
+            return this.board.a3;
         } else {
             return "";
         }
