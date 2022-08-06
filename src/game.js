@@ -97,7 +97,7 @@ class Game {
 
     checkDrawCondition() {
         if (this.turnCount > 8) {
-            currentGame.gameOver = true;
+            // currentGame.gameOver = true;
             currentGame.isDraw = true;
         }
     }
@@ -115,6 +115,7 @@ class Game {
             c3: ""
         };
         currentGame.gameOver = false;
+        currentGame.isDraw = false;
         currentGame.turnCount = 0;
         if (currentGame.firstPlayer === "playerOne") {
             currentGame.firstPlayer = "playerTwo";

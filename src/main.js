@@ -9,7 +9,7 @@ var boardCells = document.querySelectorAll("button");
 var turnCounter = document.querySelector(".turn-counter");
 var player1Wins = document.querySelector(".player1-win-count");
 var player2Wins = document.querySelector(".player2-win-count");
-var announcement = document.querySelector(".announce-banner");
+var announcement = document.querySelector(".announcements");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
@@ -29,10 +29,6 @@ function showCurrentTurn() {
             turnCounter.innerHTML = 
             `<h2 class="player-header">The <img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}">'s Turn</h2>`
         }
-
-        if (currentGame.gameOver) {
-            turnCounter.innerHTML = "";
-        }
     }
 }
 
@@ -46,7 +42,7 @@ function clickBoard(event) {
 
     renderBoard();
 
-    if (currentGame.gameOver) {
+    if (currentGame.gameOver || currentGame.isDraw) {
         setTimeout(triggerBoardReset, 2000);
     } 
 }
@@ -62,26 +58,27 @@ function renderBoard() {
             `<img src=${currentGame.board[cellId]}>`;
         }
     }
-    console.log(currentGame.currentTurn);
-    console.log(currentGame.gameOver)
-    console.log(currentGame.isDraw)
+
     showCurrentTurn();
+    displayAnnouncement();
 }
 
 // Game Over Display
 function displayAnnouncement() {
-
+    for (var i = 0; i < currentGame.players.length; i++) {
+        if (currentGame.isDraw) {
+            announcement.innerHTML = 
+            `<h2 class="announce-banner">It's a Draw!</h2>`;
+        } else if (currentGame.gameOver) {
+            announcement.innerHTML =
+            `<h2 class="announce-banner"><img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}"> Wins!</h2>`;
+        }
+    }
 }
-// displayAnnoucement (show the winner or draw/update currentGame.players[i]winsCount = player1-win-count)
-// announceWinner.classList.remove(".hidden")
-// on a draw--
-// It's a Draw!
-// on a winner--
-// <img class="player-token hidden" src="./assets/Sun.svg" alt="player 1 sun"> Wins!
 
 // Reset Game
 function triggerBoardReset() {
     currentGame.resetGame()
     renderBoard();
-    announcement.innerText = "";
+    announcement.innerHTML = "";
 }
