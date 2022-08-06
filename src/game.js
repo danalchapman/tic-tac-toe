@@ -34,7 +34,7 @@ class Game {
 
     setPlayerToken(cellId) {
         for (var i = 0; i < this.players.length; i++) {
-            if (!this.board[cellId] && this.players[i].name === this.currentTurn) {
+            if (!this.board[cellId] && this.players[i] === this.currentTurn) {
                 this.board[cellId] = this.players[i].token;
                 this.checkPlayerTurn();
             }

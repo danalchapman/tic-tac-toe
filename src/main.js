@@ -1,7 +1,7 @@
 // Global Variables
 var playerOne = new Player("playerOne", "./assets/Sun.svg");
-var playerTwo = new Player("playerTwo", "./assets/Terrestrial-World.svg")
-var currentGame = new Game(playerOne, playerTwo);
+var playerTwo = new Player("playerTwo", "./assets/Terrestrial-World.svg");
+var currentGame 
 
 // Selectors
 var gameBoard = document.querySelector(".game-board");
@@ -13,14 +13,44 @@ var announceDraw = document.querySelector(".announce-draw");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
+// gameBoard.addEventListener("click", clickBoard);
 
 // Functions
-// createGame (new game on refresh)
+function createGame(playerOne, playerTwo) {
+    currentGame = new Game(playerOne, playerTwo);
+    currentGame.players.push(playerOne, playerTwo);
+}
 
-// clickBoard (player token on dom)
-// for loop/conditional for tile that is placed?
+// function clickBoard(event) {
+//     console.log(currentGame)
+//     console.log(Object.values(currentGame.board))
+//     var cellId = event.target.id; {
+//     if (currentGame.board[cellId] === "") {
+//         currentGame.setPlayerToken(cellId);
+//         }
+//     }
+//     console.log(currentGame)
+//     console.log(Object.values(currentGame.board))
+//     renderBoard();
+// }
 
-// renderBoard
+// function renderBoard() {
+//     gameBoard.innerHTML = "";
+
+//     for (var i = 0; i < currentGame.players.length; i++) {
+//         var playerTileToken = "./assets/Sun.svg";
+        
+//         if (currentGame.players[i].token === playerTileToken) {
+//             playerTileToken = "./assets/Terrestrial-World.svg";
+//         }
+
+//         gameBoard.innerHTML += 
+//         `
+        
+//         <img class="player-token" src=${playerTileToken} alt="player 1 sun">`;
+//     }
+
+// }
 
 // turnCounter (change token to indicate turn)
 // swap src=${} dependent on currentTurn
