@@ -6,30 +6,28 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <section class="page-container">
-        <section class="player-container left-side">
-          <img class="player-token" id="player1-token" src="./assets/Sun.svg" alt="player 1 sun">
-          <h3 class="player1-win-count">Wins: 0</h3>
-        </section>
-        <section class="game-board-container">
-          <header class="turn-counter"></header>
-          <article class="game-board">
-            <button class="right-bot-border square" id="a1"></button>
-            <button class="bottom-border square" id="a2"></button>
-            <button class="left-bot-border square" id="a3"></button>
-            <button class="right-bot-border square" id="b1"></button>
-            <button class="bottom-border square" id="b2"></button>
-            <button class="left-bot-border square" id="b3"></button>
-            <button class="right-border square" id="c1"></button>
-            <button class="no-border" id="c2"></button>
-            <button class="left-border square" id="c3"></button>
-          </article>
-          <footer class="announcements"></footer>
-        </section>
-        <section class="player-container right-side">
-          <img class="player-token" id="player2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
-          <h3 class="player2-win-count">Wins: 0</h3>
-        </section>
+    <section class="player-container left-side">
+      <img class="player-token" id="player1-token" src="./assets/Sun.svg" alt="player 1 sun">
+      <h3 class="player1-win-count">Wins: 0</h3>
+    </section>
+    <section class="game-board-container">
+      <header class="banner" id="turn-counter"></header>
+      <article class="game-board">
+        <button class="right-bot-border square" id="a1"></button>
+        <button class="bottom-border square" id="a2"></button>
+        <button class="left-bot-border square" id="a3"></button>
+        <button class="right-bot-border square" id="b1"></button>
+        <button class="bottom-border square" id="b2"></button>
+        <button class="left-bot-border square" id="b3"></button>
+        <button class="right-border square" id="c1"></button>
+        <button class="no-border" id="c2"></button>
+        <button class="left-border square" id="c3"></button>
+      </article>
+      <footer class="banner" id="announcements"></footer>
+    </section>
+    <section class="player-container right-side">
+      <img class="player-token" id="player2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
+      <h3 class="player2-win-count">Wins: 0</h3>
     </section>
     <script type="text/javascript" src="./src/player.js"></script>
     <script type="text/javascript" src="./src/game.js"></script>

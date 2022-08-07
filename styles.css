@@ -1,13 +1,9 @@
 /* Global Styling */
 body {
     background-color: lightslategray;
-    margin: 0px;
-}
-
-.page-container {
     font-family: "Luminari", fantasy;
     display: flex;
-    margin-right: 0;
+    margin: 0px;
     height: 100vh;
 }
 
@@ -53,17 +49,13 @@ body {
     width: 100%;
 }
 
-.turn-counter,
-.announcements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: inherit;
+.banner {
+    text-align: center;
     font-size: 25px;
-    margin: 20px 10px;
+    min-height: 40px;
 }
 
-.player-header .player-token {
+.banner .player-token {
     margin: 0px;
 }
 

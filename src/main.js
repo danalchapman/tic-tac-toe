@@ -6,10 +6,10 @@ var currentGame
 // Selectors
 var gameBoard = document.querySelector(".game-board");
 var boardCells = document.querySelectorAll("button");
-var turnCounter = document.querySelector(".turn-counter");
+var turnCounter = document.querySelector("#turn-counter");
 var player1Wins = document.querySelector(".player1-win-count");
 var player2Wins = document.querySelector(".player2-win-count");
-var announcement = document.querySelector(".announcements");
+var announcement = document.querySelector("#announcements");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
@@ -40,9 +40,9 @@ function clickBoard(event) {
 
     renderBoard();
 
-    if (currentGame.gameOver || currentGame.isDraw) {
-        setTimeout(triggerBoardReset, 2000);
-    } 
+    // if (currentGame.gameOver || currentGame.isDraw) {
+    //     setTimeout(triggerBoardReset, 2000);
+    // } 
 }
 
 function renderBoard() { 
