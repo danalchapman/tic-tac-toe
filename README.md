@@ -1,9 +1,13 @@
 # Astrological Tic-Tac-Toe
 
-⋅⋅⋅Dana Chapman || 2207FE || Mod 1 Final Solo Poject⋅⋅
-⋅⋅⋅[Turing's Tic-Tac-Toe Specs](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html)⋅⋅
-⋅⋅⋅Tic-Tac-Toe is the final project for Turing's Mod 1 Front-End Engineering students. With this last project we combine all of the lessons from the first five weeks to create a tangible and interactive web page to showcase the knowledge we've learned, as well as indulging the more creative sides of our minds.⋅⋅
-⋅⋅⋅If you're new to the world of Tic-Tac-Toe, do not fear -- you don't need fancy gadgets or gizmos a plenty. The rules for Tic-Tac-Toe are simple and ageless: you and another player (in this case, another friend or rival!) will choose a side, the Sun or the Moon. Your ultimate goal is to win the game by achieving a 3-token line either horizontally, vertically, or diagonally. Your page will display the winner or a draw, and then after a short period of time the board will reset so that you may face off once more. The side bar that corresponds with your chosen token will keep track of your wins, and all you need to play is an open broswer tab! (We recommend Chrome Web Broswer.)⋅⋅
+Dana Chapman || 2207FE || Mod 1 Final Solo Poject
+
+[Turing's Tic-Tac-Toe Specs](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html)
+
+Tic-Tac-Toe is the final project for Turing's Mod 1 Front-End Engineering students. With this last project we combine all of the lessons from the first five weeks to create a tangible and interactive web page to showcase the knowledge we've learned, as well as indulging the more creative sides of our minds.
+
+If you're new to the world of Tic-Tac-Toe, do not fear -- you don't need fancy gadgets or gizmos a plenty. The rules for Tic-Tac-Toe are simple and ageless: you and another player (in this case, another friend or rival!) will choose a side, the Sun or the Moon. Your ultimate goal is to win the game by achieving a 3-token line either horizontally, vertically, or diagonally. Your page will display the winner or a draw, and then after a short period of time the board will reset so that you may face off once more. The side bar that corresponds with your chosen token will keep track of your wins, and all you need to play is an open broswer tab! (We recommend Chrome Web Broswer.)
+
 [Short clip of Astrological Tic-Tac-Toe](https://media.giphy.com/media/K5DfzPn36SWGIezkX5/giphy.gif)
 
 ## Technologies Used
@@ -19,9 +23,9 @@ This project contains an `assets` folder that holds all the images used in the p
 ## Future Features
 
 1. Add Dropdown for Different Player Tokens
-- This is an Astrological-themed Tic-Tac-Toe board, in the future I would love to add new token options for each player. Stars, planets, comets - anything that can be found in the vacuum of space? I would love to bring to the table as an option to represent a player.
+This is an Astrological-themed Tic-Tac-Toe board, in the future I would love to add new token options for each player. Stars, planets, comets - anything that can be found in the vacuum of space? I would love to bring to the table as an option to represent a player.
 2. Reset Button & Clear Wins Button
-- I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for a future local-storage extension that would allow the user to clear the local storage, resetting both player wins to a count of 0.
+I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for a future local-storage extension that would allow the user to clear the local storage, resetting both player wins to a count of 0.
 
 ## Challenges & Celebrations
 
@@ -33,5 +37,6 @@ Unsurprising to anyone who knows me, I enjoy getting to flex the creative side o
 
 ### Credits
 
-⋅⋅⋅[Player Background Images from unsplash](https://unsplash.com/)⋅⋅
-⋅⋅⋅[Player Tokens from FreeSVG](https://freesvg.org/)⋅⋅
+[Player Background Images from unsplash](https://unsplash.com/)
+
+[Player Tokens from FreeSVG](https://freesvg.org/)
