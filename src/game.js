@@ -62,11 +62,11 @@ class Game {
     }
 
     checkHorizontalWin() { 
-        if (this.board.a1 === this.board.a2 && this.board.a2 === this.board.a3) {
+        if (this.board.a1 && this.board.a1 === this.board.a2 && this.board.a2 === this.board.a3) {
             return this.board.a1;
-        } else if (this.board.b1 === this.board.b2 && this.board.b2 === this.board.b3) {
+        } else if (this.board.b1 && this.board.b1 === this.board.b2 && this.board.b2 === this.board.b3) {
             return this.board.b1; // not triggering
-        } else if (this.board.c1 === this.board.c2 && this.board.c2 === this.board.c3) {
+        } else if (this.board.c1 && this.board.c1 === this.board.c2 && this.board.c2 === this.board.c3) {
             return this.board.c1; // not triggering
         } else {
             return "";
@@ -74,11 +74,11 @@ class Game {
     }
     
     checkVerticalWin() {
-        if (this.board.a1 === this.board.b1 && this.board.b1 === this.board.c1) {
+        if (this.board.a1 && this.board.a1 === this.board.b1 && this.board.b1 === this.board.c1) {
             return this.board.a1;
-        } else if (this.board.a2 === this.board.b2 && this.board.b2 === this.board.c2) {
-            return this.board.a2;
-        } else if (this.board.a3 === this.board.b3 && this.board.b3 === this.board.c3) {
+        } else if (this.board.a2 && this.board.a2 === this.board.b2 && this.board.b2 === this.board.c2) {
+            return this.board.a2; // not triggering
+        } else if (this.board.a3 && this.board.a3 === this.board.b3 && this.board.b3 === this.board.c3) {
             return this.board.a3; // not triggering
         } else {
             return "";
@@ -86,9 +86,9 @@ class Game {
     }
     
     checkDiagonalWin() {
-        if (this.board.a1 === this.board.b2 && this.board.b2 === this.board.c3) {
+        if (this.board.a1 && this.board.a1 === this.board.b2 && this.board.b2 === this.board.c3) {
             return this.board.a1;
-        } else if (this.board.a3 === this.board.b2 && this.board.b2 === this.board.c1) {
+        } else if (this.board.a3 && this.board.a3 === this.board.b2 && this.board.b2 === this.board.c1) {
             return this.board.a3;
         } else {
             return "";
