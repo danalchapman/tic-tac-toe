@@ -25,7 +25,7 @@ function showCurrentTurn() {
     for (var i = 0; i < currentGame.players.length; i++) {
         if (currentGame.currentTurn === currentGame.players[i].name) {
             turnCounter.innerHTML = 
-            `The <img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}">'s Turn`
+            `The <img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}">'s Turn`;
         }
     }
 }
@@ -39,7 +39,7 @@ function handleBoardClick(event) {
     renderBoard();
 
     if (currentGame.gameOver || currentGame.isDraw) {
-        setTimeout(triggerBoardReset, 2000);
+        setTimeout(triggerBoardReset, 4000);
     } 
 }
 
@@ -63,10 +63,13 @@ function renderBoard() {
 function displayAnnouncement() {
     for (var i = 0; i < currentGame.players.length; i++) {
         if (currentGame.isDraw && !currentGame.gameOver) {
-            announcement.innerHTML = `It's a Draw!`;
+            announcement.innerHTML = 
+            `<p>It's a Draw!</p>
+            <p class="banner-alert">New game starting shortly. . .</p>`;
         } else if (currentGame.gameOver && currentGame.currentTurn === currentGame.players[i].name) {
             announcement.innerHTML =
-            `<img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}"> Wins!`;
+            `<p><img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}"> Wins!</p>
+            <p class="banner-alert">New game starting shortly. . .</p>`;
         } 
     }
 }
@@ -80,7 +83,7 @@ function updatePlayerWins() {
 }
 
 function triggerBoardReset() {
-    currentGame.resetGame()
+    currentGame.resetGame();
     announcement.innerHTML = "";
     renderBoard();
 }

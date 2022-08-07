@@ -16,7 +16,7 @@ class Game {
         this.players = [playerOne, playerTwo];
         this.firstPlayer = "playerOne";
         this.currentTurn = "playerOne";
-        this.turnCount = 1;
+        this.turnCount = 1
     }
 
     checkPlayerTurn() {
@@ -45,6 +45,7 @@ class Game {
     
     checkWinCondition() {
         var winningToken = this.checkHorizontalWin();
+
         if (!winningToken) {
             winningToken = this.checkVerticalWin();
         } 

@@ -59,6 +59,10 @@ body {
     margin: 0px;
 }
 
+.banner-alert {
+    font-size: 14px;
+}
+
 .game-board-grid {
     align-content: center;
     display: grid;
