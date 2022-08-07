@@ -1,32 +1,32 @@
 /* Global Styling */
 body {
     background-color: lightslategray;
-    margin: 0px;
-}
-
-.page-container {
-    font-family: "Luminari", fantasy;
     display: flex;
-    margin-right: 0;
+    font-family: "Luminari", fantasy;
     height: 100vh;
-}
-
-.player-token {
-    margin: 15px 0px 7px 0px;
-    height: 30px;
-    width: 30px;
+    margin: 0px;
 }
 
 /* Players' Side Bar */
 .player-container {
+    align-items: center;
     background-position: center;
     background-size: cover;
     color: antiquewhite;
     display: flex;
-    align-items: center;
     flex-direction: column;
     height: 100%;
     width: 400px;
+}
+
+.player-token {
+    height: 30px;
+    margin: 15px 0px 7px 0px;
+    width: 30px;
+}
+
+.player-win-display {
+    margin: 0px;
 }
 
 .left-side {
@@ -37,54 +37,47 @@ body {
     background-image: url("./assets/vino-li-PkJbY56JKh4-unsplash.jpg");
 }
 
-.player-win-count {
-    margin: 0px;
-}
-
 /* Game Board */
 .game-board-container {
+    align-items: center;
     background-image: linear-gradient(#343D5B, #81566A, #9D653E);
     color: antiquewhite;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
     height: 100%;
+    justify-content: space-around;
     width: 100%;
 }
 
-.turn-counter,
-.announcements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: inherit;
-}
-
-.player-header,
-.announce-wins,
-.announce-draw {
+.banner {
     font-size: 25px;
-    margin: 20px 10px;
+    min-height: 40px;
+    text-align: center;
 }
 
-.player-header .player-token {
+.banner .player-token {
     margin: 0px;
 }
 
-.game-board {
-    display: grid;
+.banner-alert {
+    font-size: 14px;
+}
+
+.game-board-grid {
     align-content: center;
-    justify-content: center;
+    display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     height: 55%;
+    justify-content: center;
     width: 65%;
 }
 
 /* Buttons */
 button {
     background: none;
+    border-color: antiquewhite;
+    border-style: solid;
     cursor: pointer;
     height: 125px;
     width: 125px;
@@ -111,14 +104,5 @@ button {
 }
 
 .no-border {
-    border: none;
-}
-
-.square {
-    border-style: solid;
-    border-color: antiquewhite;
-}
-
-.hidden {
-    display: none;
+    border: 0px;
 }
