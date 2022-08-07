@@ -25,16 +25,16 @@ body {
     width: 400px;
 }
 
+.player-win-display {
+    margin: 0px;
+}
+
 .left-side {
     background-image: url("./assets/david-billings-xczh7jN17fA-unsplash.jpg");
 }
 
 .right-side {
     background-image: url("./assets/vino-li-PkJbY56JKh4-unsplash.jpg");
-}
-
-.player-win-count {
-    margin: 0px;
 }
 
 /* Game Board */
@@ -59,7 +59,7 @@ body {
     margin: 0px;
 }
 
-.game-board {
+.game-board-grid {
     display: grid;
     align-content: center;
     justify-content: center;

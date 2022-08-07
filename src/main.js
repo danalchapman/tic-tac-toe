@@ -4,24 +4,23 @@ var playerTwo = new Player("playerTwo", "./assets/Terrestrial-World.svg");
 var currentGame 
 
 // Selectors
-var gameBoard = document.querySelector(".game-board");
+var gameBoard = document.querySelector("#game-board");
 var boardCells = document.querySelectorAll("button");
 var turnCounter = document.querySelector("#turn-counter");
-var player1Wins = document.querySelector(".player1-win-count");
-var player2Wins = document.querySelector(".player2-win-count");
 var announcement = document.querySelector("#announcements");
+var player1Wins = document.querySelector("#player1-win-count");
+var player2Wins = document.querySelector("#player2-win-count");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
-gameBoard.addEventListener("click", clickBoard);
+gameBoard.addEventListener("click", handleBoardClick);
 
-// New Game
+// Functions
 function createGame() {
     currentGame = new Game(playerOne, playerTwo);
     showCurrentTurn();
 }
 
-// Turn Display
 function showCurrentTurn() {
     for (var i = 0; i < currentGame.players.length; i++) {
         if (currentGame.currentTurn === currentGame.players[i].name) {
@@ -31,8 +30,7 @@ function showCurrentTurn() {
     }
 }
 
-// Game Board Functions
-function clickBoard(event) {
+function handleBoardClick(event) {
     var cellId = event.target.id; 
     if (currentGame.board[cellId] === "") {
         currentGame.setPlayerToken(cellId);
@@ -40,9 +38,9 @@ function clickBoard(event) {
 
     renderBoard();
 
-    // if (currentGame.gameOver || currentGame.isDraw) {
-    //     setTimeout(triggerBoardReset, 2000);
-    // } 
+    if (currentGame.gameOver || currentGame.isDraw) {
+        setTimeout(triggerBoardReset, 2000);
+    } 
 }
 
 function renderBoard() { 
@@ -62,7 +60,6 @@ function renderBoard() {
     displayAnnouncement();
 }
 
-// Post-Game Displays
 function displayAnnouncement() {
     for (var i = 0; i < currentGame.players.length; i++) {
         if (currentGame.isDraw && !currentGame.gameOver) {
@@ -82,7 +79,6 @@ function updatePlayerWins() {
     `Wins: ${currentGame.players[1].winsCount}`;
 }
 
-// Reset Game
 function triggerBoardReset() {
     currentGame.resetGame()
     announcement.innerHTML = "";

@@ -7,12 +7,12 @@
   </head>
   <body>
     <section class="player-container left-side">
-      <img class="player-token" id="player1-token" src="./assets/Sun.svg" alt="player 1 sun">
-      <h3 class="player1-win-count">Wins: 0</h3>
+      <img class="player-token" src="./assets/Sun.svg" alt="player 1 sun">
+      <h3 class="player-win-display" id="player1-win-count">Wins: 0</h3>
     </section>
     <section class="game-board-container">
       <header class="banner" id="turn-counter"></header>
-      <article class="game-board">
+      <article class="game-board-grid" id="game-board">
         <button class="right-bot-border square" id="a1"></button>
         <button class="bottom-border square" id="a2"></button>
         <button class="left-bot-border square" id="a3"></button>
@@ -26,8 +26,8 @@
       <footer class="banner" id="announcements"></footer>
     </section>
     <section class="player-container right-side">
-      <img class="player-token" id="player2-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
-      <h3 class="player2-win-count">Wins: 0</h3>
+      <img class="player-token" src="./assets/Terrestrial-World.svg" alt="player 2 moon">
+      <h3 class="player-win-display" id="player2-win-count">Wins: 0</h3>
     </section>
     <script type="text/javascript" src="./src/player.js"></script>
     <script type="text/javascript" src="./src/game.js"></script>
