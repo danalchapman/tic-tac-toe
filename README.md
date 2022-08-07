@@ -25,6 +25,7 @@ This project contains an `assets` folder that holds all the images used in the p
 1. Add Dropdown for Different Player Tokens
 
 This is an Astrological-themed Tic-Tac-Toe board, in the future I would love to add new token options for each player. Stars, planets, comets - anything that can be found in the vacuum of space? I would love to bring to the table as an option to represent a player.
+
 2. Reset Button & Clear Wins Button
 
 I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for a future local-storage extension that would allow the user to clear the local storage, resetting both player wins to a count of 0.
