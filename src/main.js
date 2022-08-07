@@ -58,7 +58,11 @@ function renderBoard() {
             `<img src=${currentGame.board[cellId]}>`;
         }
     }
-
+    console.log("turnCount:", currentGame.turnCount)
+    console.log("firstPlayer:", currentGame.firstPlayer)
+    console.log("currentTurnPlayer:", currentGame.currentTurn)
+    console.log("gameOver:", currentGame.gameOver)
+    console.log("isDraw:", currentGame.isDraw)
     showCurrentTurn();
     displayAnnouncement();
 }
