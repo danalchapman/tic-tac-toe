@@ -15,7 +15,6 @@ var announcement = document.querySelector(".announcements");
 window.addEventListener("load", createGame);
 gameBoard.addEventListener("click", clickBoard);
 
-// Functions
 // New Game
 function createGame() {
     currentGame = new Game(playerOne, playerTwo);
@@ -32,7 +31,7 @@ function showCurrentTurn() {
     }
 }
 
-// Game Board
+// Game Board Functions
 function clickBoard(event) {
     var cellId = event.target.id; {
     if (currentGame.board[cellId] === "") {
@@ -58,31 +57,36 @@ function renderBoard() {
             `<img src=${currentGame.board[cellId]}>`;
         }
     }
-    console.log("turnCount:", currentGame.turnCount)
-    console.log("firstPlayer:", currentGame.firstPlayer)
-    console.log("currentTurnPlayer:", currentGame.currentTurn)
-    console.log("gameOver:", currentGame.gameOver)
-    console.log("isDraw:", currentGame.isDraw)
+
     showCurrentTurn();
+    updatePlayerWins();
     displayAnnouncement();
 }
 
-// Game Over Display
+// Post-Game Displays
 function displayAnnouncement() {
     for (var i = 0; i < currentGame.players.length; i++) {
-        if (currentGame.isDraw) {
+        if (currentGame.isDraw && !currentGame.gameOver) {
             announcement.innerHTML = 
             `<h2 class="announce-banner">It's a Draw!</h2>`;
-        } else if (currentGame.gameOver) {
+        } else if (currentGame.gameOver && currentGame.currentTurn === currentGame.players[i].name) {
             announcement.innerHTML =
             `<h2 class="announce-banner"><img class="player-token" src="${currentGame.players[i].token}" alt="${currentGame.players[i].name}"> Wins!</h2>`;
-        }
+        } 
     }
+}
+
+function updatePlayerWins() {
+    player1Wins.innerHTML = 
+    `Wins: ${currentGame.players[0].winsCount}`;
+
+    player2Wins.innerHTML = 
+    `Wins: ${currentGame.players[1].winsCount}`;
 }
 
 // Reset Game
 function triggerBoardReset() {
     currentGame.resetGame()
-    renderBoard();
     announcement.innerHTML = "";
+    renderBoard();
 }

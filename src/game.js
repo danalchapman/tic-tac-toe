@@ -16,7 +16,7 @@ class Game {
         this.players = [playerOne, playerTwo];
         this.firstPlayer = "playerOne";
         this.currentTurn = "playerOne";
-        this.turnCount = 0;
+        this.turnCount = 1;
     }
 
     checkPlayerTurn() {
@@ -27,11 +27,11 @@ class Game {
     }
 
     changeTurn() {
-        if (this.currentTurn === "playerOne") {
+        if (this.currentTurn === "playerOne" && !this.gameOver) {
             this.currentTurn = "playerTwo";
-        } else {
+        } else if (this.currentTurn === "playerTwo" && !this.gameOver) {
             this.currentTurn = "playerOne";
-        }
+        } 
     }
 
     setPlayerToken(cellId) {
@@ -55,8 +55,8 @@ class Game {
         for (var i = 0; i < this.players.length; i++) {
             if (winningToken === this.players[i].token) {
                 this.players[i].winsCount += 1;
-                currentGame.gameOver = true;
-                currentGame.isDraw = false;
+                this.gameOver = true;
+                this.isDraw = false;
             }
         }
     }
@@ -65,9 +65,9 @@ class Game {
         if (this.board.a1 === this.board.a2 && this.board.a2 === this.board.a3) {
             return this.board.a1;
         } else if (this.board.b1 === this.board.b2 && this.board.b2 === this.board.b3) {
-            return this.board.b1;
+            return this.board.b1; // not triggering
         } else if (this.board.c1 === this.board.c2 && this.board.c2 === this.board.c3) {
-            return this.board.c1;
+            return this.board.c1; // not triggering
         } else {
             return "";
         }
@@ -79,7 +79,7 @@ class Game {
         } else if (this.board.a2 === this.board.b2 && this.board.b2 === this.board.c2) {
             return this.board.a2;
         } else if (this.board.a3 === this.board.b3 && this.board.b3 === this.board.c3) {
-            return this.board.a3;
+            return this.board.a3; // not triggering
         } else {
             return "";
         }
@@ -97,13 +97,13 @@ class Game {
 
     checkDrawCondition() {
         if (this.turnCount > 8) {
-            currentGame.isDraw = true;
-            currentGame.gameOver = false;
+            this.isDraw = true;
+            this.gameOver = false;
         }
     }
     
     resetGame() {
-        currentGame.board = {
+        this.board = {
             a1: "",
             a2: "",
             a3: "",
@@ -114,15 +114,15 @@ class Game {
             c2: "",
             c3: ""
         };
-        currentGame.gameOver = false;
-        currentGame.isDraw = false;
-        currentGame.turnCount = 0;
-        if (currentGame.firstPlayer === "playerOne") {
-            currentGame.firstPlayer = "playerTwo";
-            currentGame.currentTurn = "playerTwo";
+        this.gameOver = false;
+        this.isDraw = false;
+        this.turnCount = 0;
+        if (this.firstPlayer === "playerOne") {
+            this.firstPlayer = "playerTwo";
+            this.currentTurn = "playerTwo";
         } else {
-            currentGame.firstPlayer = "playerOne";
-            currentGame.currentTurn = "playerOne";
+            this.firstPlayer = "playerOne";
+            this.currentTurn = "playerOne";
         }
     }
 }
