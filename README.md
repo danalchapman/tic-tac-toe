@@ -10,6 +10,13 @@ If you're new to the world of Tic-Tac-Toe, do not fear -- you don't need fancy g
 
 ![Short clip of Astrological Tic-Tac-Toe](https://media.giphy.com/media/K5DfzPn36SWGIezkX5/giphy.gif)
 
+## Set-up for your Local Machine
+
+If you have access to this repository (which is currently private at this time), here are the steps to access the web page from your local machine:
+
+1. Clone the repository to your local machine
+2. In the local directory, input `open index.html` into your command line
+
 ## Technologies Used
 
 1. HTML
@@ -33,7 +40,7 @@ I would love to add on a manual reset button below the game board that a user co
 ## Challenges & Celebrations
 
 #### Challenges 
-My biggest challenge (out of the many) was connecting my data model in `game.js` to the DOM represented in `main.js`. Having to think of both of them separately and then finding the conecting dots was a difficult nut to crack, there were many iterations of the `handleBoardClick` and `renderBoard` functions especially, and even more time spent on the `displayAnnouncement`function when I realize that some of my data model logic was off. A constant back and forth between both files in order to achieve a beautiful and also functioning game.
+My biggest challenge (out of the many) was connecting my data model in `game.js` to the DOM represented in `main.js`. Having to think of both of them separately and then finding the conecting dots was a difficult nut to crack, there were many iterations of the `handleBoardClick` and `renderBoard` functions especially, and even more time spent on the `displayAnnouncement`function when I realized that some of my data model logic was off. A constant back and forth between both files in order to achieve a beautiful and also functioning game.
 
 #### Celebrations
 Unsurprising to anyone who knows me, I enjoy getting to flex the creative side of my brain and I had a lot of fun playing with the CSS to design a thematic board. Even before our instructor was done sharing the specs for this project I knew I wanted to incorporate the sun and the moon as the "opposing" players, with some thought on future dropdown additions. An honorable mention is also when I wrote out the `updatePlayerWins` function and it worked on the very first try (after calling it in my `renderBoard` function) was probably the biggest technical __HUZZAH__ of this project, however small a drop that function is in the ocean of this project. It was an amazing feeling all the same.
