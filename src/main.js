@@ -18,6 +18,9 @@ gameBoard.addEventListener("click", handleBoardClick);
 // Functions
 function createGame() {
     currentGame = new Game(playerOne, playerTwo);
+    
+    // currentGame.players.getWins();
+    // currentGame.players.winsCount = parsedWins;
     showCurrentTurn();
 }
 
@@ -85,5 +88,6 @@ function updatePlayerWins() {
 function triggerBoardReset() {
     currentGame.resetGame();
     announcement.innerHTML = "";
+
     renderBoard();
 }
