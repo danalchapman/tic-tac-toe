@@ -25,7 +25,11 @@ If you have access to this repository (which is currently private at this time),
 
 ## Code Architecture 
 
-This project contains an `assets` folder that holds all the images used in the project (player tokens and player backgrounds), a `src` folder than contains the three JavaScript files that create the behavior for the HTML file: `player.js` which holds the `player` class; `game.js` which holds the `game`class and its methods that naviagte and hold the data model; and `main.js` that holds the global variables, the selectors, the event listeners and the functions that manipulate and update the DOM. There is, lastly, the `index.html` which contains the HTML, and the `styles.css` which holds the styling sheet for the HTML.
+_player.js_ contains the player class and it's methods where the player instance information is kept: name, token, and winsCount and an `increaseWins` method to increment the player wins.
+
+_game.js_ contains the game class and it's methods that control the data model of the project - turn count/player turn, tracking board data (token placement), checking for win and draw conditions, and reseting the board for a new game. This file updates the data model __only__.
+
+_main.js_ contains all of the DOM-related functions that dictate the behavior that the user sees on the page - like the win counts being updated in the player side bars, the turn counter indicating who is next, the board itself and the tokens placed in their spots, and the winner and draw displays when a game is over. No data model changes happen in this file.
 
 ## Future Features
 
