@@ -55,7 +55,7 @@ class Game {
 
         for (var i = 0; i < this.players.length; i++) {
             if (winningToken === this.players[i].token) {
-                this.players[i].winsCount += 1;
+                this.players[i].increaseWins();
                 this.gameOver = true;
                 this.isDraw = false;
             }
