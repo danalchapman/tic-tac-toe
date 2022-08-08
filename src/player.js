@@ -9,12 +9,12 @@ class Player {
         this.winsCount += 1;
     }
 
-    storeWins() { //store local
+    storeWins() {
         var winsToStore = JSON.stringify(this.winsCount);
         localStorage.setItem(`stored-wins-${this.name}`, winsToStore);
     }
 
-    getWins() { //retrieve local
+    getWins() {
         var retrievedWins = localStorage.getItem(`stored-wins-${this.name}`);
         var parsedWins = JSON.parse(retrievedWins);
         return parsedWins;

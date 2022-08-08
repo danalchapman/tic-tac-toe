@@ -19,9 +19,9 @@ gameBoard.addEventListener("click", handleBoardClick);
 function createGame() {
     currentGame = new Game(playerOne, playerTwo);
     
-    // currentGame.players.getWins();
-    // currentGame.players.winsCount = parsedWins;
     showCurrentTurn();
+    currentGame.players[0].getWins();
+    currentGame.players[1].getWins();
 }
 
 function showCurrentTurn() {
