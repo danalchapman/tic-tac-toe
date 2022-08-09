@@ -8,7 +8,7 @@ Tic-Tac-Toe is the final project for Turing's Mod 1 Front-End Engineering studen
 
 If you're new to the world of Tic-Tac-Toe, do not fear -- you don't need fancy gadgets or gizmos a plenty. The rules for Tic-Tac-Toe are simple and ageless: you and another player (in this case, another friend or rival!) will choose a side, the Sun or the Moon. Your ultimate goal is to win the game by achieving a 3-token line either horizontally, vertically, or diagonally. Your page will display the winner or a draw, and then after a short period of time the board will reset so that you may face off once more. The side bar that corresponds with your chosen token will keep track of your wins, and all you need to play is an open broswer tab! (We recommend Chrome Web Broswer.)
 
-![Short clip of Astrological Tic-Tac-Toe](https://media.giphy.com/media/K5DfzPn36SWGIezkX5/giphy.gif)
+![Short gif of Astrological Tic-Tac-Toe](https://media.giphy.com/media/K5DfzPn36SWGIezkX5/giphy.gif)
 
 ## Set-up for your Local Machine
 
@@ -25,11 +25,11 @@ If you have access to this repository (which is currently private at this time),
 
 ## Code Architecture 
 
-_player.js_ contains the player class and it's methods where the player instance information is kept: name, token, and winsCount and an `increaseWins` method to increment the player wins.
+_player.js_ contains the player class and it's methods where the player instance information is kept: name, token, and winsCount and an `increaseWins` method to increment the player wins. This file also includes methods to locally store and retrieve player wins across page loads.
 
 _game.js_ contains the game class and it's methods that control the data model of the project - turn count/player turn, tracking board data (token placement), checking for win and draw conditions, and reseting the board for a new game. This file updates the data model __only__.
 
-_main.js_ contains all of the DOM-related functions that dictate the behavior that the user sees on the page - like the win counts being updated in the player side bars, the turn counter indicating who is next, the board itself and the tokens placed in their spots, and the winner and draw displays when a game is over. No data model changes happen in this file.
+_main.js_ contains all of the DOM-related functions that dictate the behavior that the user sees on the page - like the win counts being updated in the player side bars (and those win counts persisting across page loads), the turn counter indicating who is next, the board itself and the tokens placed in their spots, and the winner and draw displays when a game is over. __No__ data model changes happen in this file. 
 
 ## Future Features
 
@@ -48,6 +48,8 @@ My biggest challenge (out of the many) was connecting my data model in `game.js`
 
 #### Celebrations
 Unsurprising to anyone who knows me, I enjoy getting to flex the creative side of my brain and I had a lot of fun playing with the CSS to design a thematic board. Even before our instructor was done sharing the specs for this project I knew I wanted to incorporate the sun and the moon as the "opposing" players, with some thought on future dropdown additions. An honorable mention is also when I wrote out the `updatePlayerWins` function and it worked on the very first try (after calling it in my `renderBoard` function) was probably the biggest technical __HUZZAH__ of this project, however small a drop that function is in the ocean of this project. It was an amazing feeling all the same.
+
+Also a shoutout to the Turing lesson on JSON and localStorage (and my mentor's gentle guidance) that helped me to complete the extension, which was my first time attempting a localStorage extension out of the four projects that offered them. Woohoo!
 
 ### Credits
 
