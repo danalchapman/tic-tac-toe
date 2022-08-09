@@ -19,9 +19,10 @@ gameBoard.addEventListener("click", handleBoardClick);
 function createGame() {
     currentGame = new Game(playerOne, playerTwo);
     
-    showCurrentTurn();
     currentGame.players[0].getWins();
     currentGame.players[1].getWins();
+    updatePlayerWins();
+    showCurrentTurn();
 }
 
 function showCurrentTurn() {
@@ -78,11 +79,19 @@ function displayAnnouncement() {
 }
 
 function updatePlayerWins() {
-    player1Wins.innerHTML = 
-    `Wins: ${currentGame.players[0].winsCount}`;
+    if (currentGame.players[0].winsCount) {
+        player1Wins.innerHTML = 
+        `Wins: ${currentGame.players[0].winsCount}`;
+    } else {
+        `Wins: 0`;
+    }
 
-    player2Wins.innerHTML = 
-    `Wins: ${currentGame.players[1].winsCount}`;
+    if (currentGame.players[1].winsCount) {
+        player2Wins.innerHTML = 
+        `Wins: ${currentGame.players[1].winsCount}`;
+    } else {
+        `Wins: 0`;
+    }
 }
 
 function triggerBoardReset() {
