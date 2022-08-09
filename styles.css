@@ -38,9 +38,10 @@ body {
 }
 
 .clear-wins {
+    background: none;
+    background-color: #81566A;
     border: 1px solid antiquewhite;
     border-radius: 8%;
-    background-color: #81566A;
     color: antiquewhite;
     cursor: pointer;
     font-family: "Luminari", fantasy;

@@ -5,15 +5,17 @@ var currentGame
 
 // Selectors
 var gameBoard = document.querySelector("#game-board");
-var boardCells = document.querySelectorAll("button");
+var boardCells = document.querySelectorAll(".grid");
 var turnCounter = document.querySelector("#turn-counter");
 var announcement = document.querySelector("#announcements");
 var player1Wins = document.querySelector("#player1-win-count");
 var player2Wins = document.querySelector("#player2-win-count");
+var clearPlayerWins = document.querySelector("#clear-player-wins");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
 gameBoard.addEventListener("click", handleBoardClick);
+clearPlayerWins.addEventListener("click", deletePlayerWins);
 
 // Functions
 function createGame() {
@@ -92,6 +94,13 @@ function updatePlayerWins() {
     } else {
         `Wins: 0`;
     }
+}
+
+function deletePlayerWins() {
+    localStorage.removeItem(`stored-wins-${currentGame.players[0].name}`);
+    localStorage.removeItem(`stored-wins-${currentGame.players[1].name}`);
+
+    updatePlayerWins();
 }
 
 function triggerBoardReset() {
