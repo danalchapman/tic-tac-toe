@@ -82,17 +82,15 @@ function displayAnnouncement() {
 
 function updatePlayerWins() {
     if (currentGame.players[0].winsCount) {
-        player1Wins.innerHTML = 
-        `Wins: ${currentGame.players[0].winsCount}`;
+        player1Wins.innerHTML = `Wins: ${currentGame.players[0].winsCount}`;
     } else {
-        `Wins: 0`;
+        player1Wins.innerHTML = `Wins: 0`;
     }
 
     if (currentGame.players[1].winsCount) {
-        player2Wins.innerHTML = 
-        `Wins: ${currentGame.players[1].winsCount}`;
+        player2Wins.innerHTML = `Wins: ${currentGame.players[1].winsCount}`;
     } else {
-        `Wins: 0`;
+        player2Wins.innerHTML = `Wins: 0`;
     }
 }
 
