@@ -98,6 +98,8 @@ function deletePlayerWins() {
     localStorage.removeItem(`stored-wins-${currentGame.players[0].name}`);
     localStorage.removeItem(`stored-wins-${currentGame.players[1].name}`);
 
+    currentGame.players[0].winsCount = 0;
+    currentGame.players[1].winsCount = 0;
     updatePlayerWins();
 }
 
