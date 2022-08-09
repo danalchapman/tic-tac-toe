@@ -5,15 +5,17 @@ var currentGame
 
 // Selectors
 var gameBoard = document.querySelector("#game-board");
-var boardCells = document.querySelectorAll("button");
+var boardCells = document.querySelectorAll(".grid");
 var turnCounter = document.querySelector("#turn-counter");
 var announcement = document.querySelector("#announcements");
 var player1Wins = document.querySelector("#player1-win-count");
 var player2Wins = document.querySelector("#player2-win-count");
+var clearPlayerWins = document.querySelector("#clear-player-wins");
 
 // Event Listeners 
 window.addEventListener("load", createGame);
 gameBoard.addEventListener("click", handleBoardClick);
+clearPlayerWins.addEventListener("click", deletePlayerWins);
 
 // Functions
 function createGame() {
@@ -21,7 +23,8 @@ function createGame() {
     
     currentGame.players[0].getWins();
     currentGame.players[1].getWins();
-    updatePlayerWins();
+    updatePlayerWins(player1Wins, 0);
+    updatePlayerWins(player2Wins, 1);
     showCurrentTurn();
 }
 
@@ -60,7 +63,8 @@ function renderBoard() {
     }
 
     showCurrentTurn();
-    updatePlayerWins();
+    updatePlayerWins(player1Wins, 0);
+    updatePlayerWins(player2Wins, 1);
     displayAnnouncement();
 }
 
@@ -78,20 +82,20 @@ function displayAnnouncement() {
     }
 }
 
-function updatePlayerWins() {
-    if (currentGame.players[0].winsCount) {
-        player1Wins.innerHTML = 
-        `Wins: ${currentGame.players[0].winsCount}`;
-    } else {
-        `Wins: 0`;
-    }
+function updatePlayerWins(playerBanner, player) {
+    playerBanner.innerText = `Wins: ${currentGame.players[player].winsCount}`;
+}
 
-    if (currentGame.players[1].winsCount) {
-        player2Wins.innerHTML = 
-        `Wins: ${currentGame.players[1].winsCount}`;
-    } else {
-        `Wins: 0`;
+function deletePlayerWins() {
+    localStorage.removeItem(`stored-wins-${currentGame.players[0].name}`);
+    localStorage.removeItem(`stored-wins-${currentGame.players[1].name}`);
+
+    for (var i = 0; i < currentGame.players.length; i++) {
+        currentGame.players[i].clearWins();
     }
+ 
+    updatePlayerWins(player1Wins, 0);
+    updatePlayerWins(player2Wins, 1);
 }
 
 function triggerBoardReset() {

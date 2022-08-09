@@ -74,7 +74,7 @@ body {
 }
 
 /* Buttons */
-button {
+.grid {
     background: none;
     border-color: antiquewhite;
     border-style: solid;
@@ -105,4 +105,17 @@ button {
 
 .no-border {
     border: 0px;
+}
+
+.clear-wins {
+    background-color: #81566A;
+    border: 1px solid antiquewhite;
+    border-radius: 8%;
+    color: antiquewhite;
+    cursor: pointer;
+    font-family: "Luminari", fantasy;
+    font-size: 10px;
+    height: 15px;
+    padding: 0px 1px 2px 1px;
+    width: 100px;
 }

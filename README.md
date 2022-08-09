@@ -29,7 +29,7 @@ _player.js_ contains the player class and it's methods where the player instance
 
 _game.js_ contains the game class and it's methods that control the data model of the project - turn count/player turn, tracking board data (token placement), checking for win and draw conditions, and reseting the board for a new game. This file updates the data model __only__.
 
-_main.js_ contains all of the DOM-related functions that dictate the behavior that the user sees on the page - like the win counts being updated in the player side bars (and those win counts persisting across page loads), the turn counter indicating who is next, the board itself and the tokens placed in their spots, and the winner and draw displays when a game is over. __No__ data model changes happen in this file. 
+_main.js_ contains all of the DOM-related functions that dictate the behavior that the user sees on the page - like the win counts being updated in the player side bars (and those win counts persisting across page loads), the turn counter indicating who is next, the board itself and the tokens placed in their spots, and the winner and draw displays when a game is over. I also added a Clear Wins button that clears the localStorage and updates the DOM player counters. __No__ data model changes happen in this file. 
 
 ## Future Features
 
@@ -37,9 +37,9 @@ _main.js_ contains all of the DOM-related functions that dictate the behavior th
 
 This is an Astrological-themed Tic-Tac-Toe board, in the future I would love to add new token options for each player. Stars, planets, comets - anything that can be found in the vacuum of space? I would love to bring to the table as an option to represent a player.
 
-2. Reset Button & Clear Wins Button
+2. Reset Button
 
-I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for the localStorage extension that would allow the user to clear the localStorage, resetting both player wins to a count of 0.
+I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over!
 
 ## Challenges & Celebrations
 
@@ -49,7 +49,7 @@ My biggest challenge (out of the many) was connecting my data model in `game.js`
 #### Celebrations
 Unsurprising to anyone who knows me, I enjoy getting to flex the creative side of my brain and I had a lot of fun playing with the CSS to design a thematic board. Even before our instructor was done sharing the specs for this project I knew I wanted to incorporate the sun and the moon as the "opposing" players, with some thought on future dropdown additions. An honorable mention is also when I wrote out the `updatePlayerWins` function and it worked on the very first try (after calling it in my `renderBoard` function) was probably the biggest technical __HUZZAH__ of this project, however small a drop that function is in the ocean of this project. It was an amazing feeling all the same.
 
-Also a shoutout to the Turing lesson on JSON and localStorage (and my mentor's gentle guidance) that helped me to complete the extension, which was my first time attempting a localStorage extension out of the four projects that offered them. Woohoo!
+Also a shoutout to the Turing lesson on JSON and localStorage (and my mentor's gentle guidance) that helped me to complete the extension, which was my first time attempting a localStorage extension out of the four projects that offered them. Woohoo! And added that Clear Wins button was icing on the cake (mmm, cake).
 
 ### Credits
 
