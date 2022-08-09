@@ -39,7 +39,7 @@ This is an Astrological-themed Tic-Tac-Toe board, in the future I would love to 
 
 2. Reset Button & Clear Wins Button
 
-I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for a future local-storage extension that would allow the user to clear the local storage, resetting both player wins to a count of 0.
+I would love to add on a manual reset button below the game board that a user could click to reset the game board without finishing a game. Sometimes we misclick, sometimes you just need a do over! Also, a Clear Wins button for the localStorage extension that would allow the user to clear the localStorage, resetting both player wins to a count of 0.
 
 ## Challenges & Celebrations
 
