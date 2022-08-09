@@ -37,6 +37,20 @@ body {
     background-image: url("./assets/vino-li-PkJbY56JKh4-unsplash.jpg");
 }
 
+.clear-wins {
+    border: 1px solid antiquewhite;
+    border-radius: 8%;
+    background-color: #81566A;
+    color: antiquewhite;
+    cursor: pointer;
+    font-family: "Luminari", fantasy;
+    font-size: 10px;
+    height: 15px;
+    margin-top: 10px;
+    padding: 0px 1px 2px 1px;
+    width: 100px;
+}
+
 /* Game Board */
 .game-board-container {
     align-items: center;
@@ -105,15 +119,4 @@ body {
 
 .no-border {
     border: 0px;
-}
-
-.clear-wins {
-    border: 0px;
-    border-radius: 8%;
-    background-color: #81566A;
-    color: antiquewhite;
-    cursor: pointer;
-    font-family: "Luminari", fantasy;
-    height: 25px;
-    width: 100px;
 }
