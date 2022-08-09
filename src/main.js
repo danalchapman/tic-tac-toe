@@ -100,6 +100,7 @@ function deletePlayerWins() {
 
     currentGame.players[0].winsCount = 0;
     currentGame.players[1].winsCount = 0;
+    
     updatePlayerWins();
 }
 
